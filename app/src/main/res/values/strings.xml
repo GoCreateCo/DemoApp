@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DemoProject</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="fb_login">FB Login</string>
+    <string name="google_login">G+ Login</string>
+    <string name="twitter_login">Twitter</string>
+    <string name="facebook_app_id">154796925109072</string>
+    <string name="fb_login_protocol_scheme">fb154796925109072</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+</resources>

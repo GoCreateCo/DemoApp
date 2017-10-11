@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.samrans.demoproject.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <RelativeLayout
+            android:id="@+id/rel_FB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/iv_fb_profile"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_fb_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/title_home"
+                        android:textSize="18sp" />
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_fb_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp" />
+
+                    <com.facebook.login.widget.ProfilePictureView
+                        android:id="@+id/friendProfilePicture"
+                        android:layout_below="@+id/login_button"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                         />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_GPlus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_gplus_profile"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_gplus_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="@string/title_home"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/gplus_login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_gplus_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</LinearLayout>
